@@ -1,0 +1,38 @@
+@using WebApplication2.Controllers
+@model EmployeeViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyView</title>
+</head>
+<body>
+
+    @*
+        @{
+            WebApplication2.Controllers.Employee emp = (WebApplication2.Controllers.Employee)
+             ViewBag.Employee;
+        }
+
+        <b>Employee Details </b><br />
+        Employee Name : @emp.FirstName @emp.LastName <br />
+        Employee Salary: @emp.Salary.ToString("C")
+    *@
+
+    Hello @Model.UserName
+    <hr />
+    <div>
+        <b>Employee Details</b><br />
+        Employee Name : @Model.EmployeeName <br />
+        <span style="background-color:@Model.SalaryColor">
+            Employee Salary: @Model.Salary
+        </span>
+    </div>
+</body>
+</html>
